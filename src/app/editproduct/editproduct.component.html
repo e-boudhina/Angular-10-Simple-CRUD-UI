@@ -1,0 +1,26 @@
+
+<div class="container">
+  <h2>Update Product</h2>
+  <form #editproductform="ngForm" (ngSubmit)="updateProductformsubmit()">
+<!--    {{product | json}}-->
+    <div class="form-group">
+      <label for="id">Id:</label>
+<!-- Use ng model to implement two way binding -->
+      <input type="text" class="form-control" required [(ngModel)]="productToUpdate.id" name="id" id="id" disabled>
+    </div>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" required [(ngModel)]="productToUpdate.name" name="name" id="name">
+    </div>
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <input type="text" class="form-control" required [(ngModel)]="productToUpdate.desc" name="description" id="description">
+    </div>
+    <div class="form-group">
+      <label for="price">Price:</label>
+      <input type="text" class="form-control" required [(ngModel)]="productToUpdate.price" name="price" id="price">
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>&nbsp;
+    <button type="submit" class="btn btn-secondary" (click)="gotolist()">Back</button>
+  </form>
+</div>

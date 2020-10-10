@@ -1,0 +1,25 @@
+<div class="container">
+  <h2>Product List</h2>
+  <p>Use the buttons provided to perform crud operations</p>
+  <table class="table">
+    <thead class="thead-dark">
+    <tr>
+      <th scope="col">Product ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th >{{product.id}}</th>
+      <td>{{product.name}}</td>
+      <td>{{product.desc}}</td>
+      <td>{{product.price}}</td>
+
+    </tr>
+
+    </tbody>
+  </table>
+  <button type="button" class="btn btn-success" (click)="gotolist()">Back</button>
+</div>

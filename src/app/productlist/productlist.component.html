@@ -1,0 +1,33 @@
+<div class="container">
+<h2>Product List</h2>
+<p>Use the buttons provided to perform crud operations</p>
+<table class="table">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">Product ID</th>
+    <th scope="col">Name</th>
+    <th scope="col">Description</th>
+    <th scope="col">Price</th>
+    <th scope="col">Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngIf="products.length ==0">
+    <td colspan="5" style="text-align: center"><h2>There are no products yet</h2></td>
+  </tr>
+  <tr *ngFor="let product of products">
+    <th >{{product.id}}</th>
+    <td>{{product.name}}</td>
+    <td>{{product.desc}}</td>
+    <td>{{product.price}}</td>
+    <td>
+      <button type="button" class="btn btn-primary" (click)="goToUpdateProduct(product.id)">Edit</button>&nbsp;
+      <button type="button" class="btn btn-secondary" (click)="goToViewProduct(product.id)">View</button>&nbsp;
+      <button type="button" class="btn btn-danger" (click)="deleteProduct(product.id)">Delete</button>
+    </td>
+  </tr>
+
+  </tbody>
+</table>
+  <button type="button" class="btn btn-success" (click)="goToAddProduct()">Add</button>
+</div>
